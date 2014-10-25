@@ -6,8 +6,13 @@
 </p>
 
 <p>
+	<% if post.kind == 'image' %>
+	show the image...
+	<%= image_tag post.content, style: "width:100%" %>
 
+	<% else %>
   <%= simple_format post.content %>
+<% end %>
 </p>
 
 <p class = "text-muted">
